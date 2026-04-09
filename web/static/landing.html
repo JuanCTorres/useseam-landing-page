@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seam — Coming Soon</title>
+  <link rel="stylesheet" href="/static/landing-bold.css">
+</head>
+<body>
+
+<!-- Nav -->
+<nav>
+  <a href="/" class="nav-logo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M17 1l4 4-4 4"/>
+      <path d="M3 11V9a4 4 0 014-4h14"/>
+      <path d="M7 23l-4-4 4-4"/>
+      <path d="M21 13v2a4 4 0 01-4 4H3"/>
+    </svg>
+    Seam
+  </a>
+  <a href="#waitlist" class="btn-ghost">Join waitlist</a>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="waitlist">
+  <div class="container">
+    <span class="eyebrow">Coming soon &nbsp;·&nbsp; Sign up for early access</span>
+    <h1>Your workspace tools,<br>in <em>sync</em>.</h1>
+    <p class="hero-sub">Nobody designed your tool stack. We help it stop falling apart.</p>
+    <p class="hero-body">
+      Your team's data is split across Notion, Airtable, Linear, and five other tools. Nobody planned it
+      that way — it just grew. And now someone on your ops team is spending hours every week
+      keeping it from diverging. There's a better way.
+    </p>
+
+    <div class="form-wrap">
+      <div id="hero-form">
+        <div class="form-row">
+          <input type="email" id="hero-email" placeholder="you@company.com" autocomplete="email">
+          <button class="btn-primary" onclick="submitWaitlist('hero')">Notify me</button>
+        </div>
+        <p class="form-note">No spam. Just updates when we launch.</p>
+        <p class="form-error" id="hero-error" style="display:none"></p>
+      </div>
+      <div class="form-success" id="hero-success">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+        You're on the list. We'll be in touch.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pain Points -->
+<section class="pain-section">
+  <div class="container-wide">
+    <p class="pain-intro">
+      Most teams don't have a data problem — they have a <em>coherence</em> problem. The data exists. It's just never in the right place, in the right shape, at the right time.
+    </p>
+    <div class="pain-grid">
+
+      <div class="pain-card">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <path d="M12 8v8M8 12l4 4 4-4"/>
+          </svg>
+        </div>
+        <h3>Notion became your system of record.<br>Now you can't get data out of it.</h3>
+        <p>Reports live in databases no analytics tool can query. Insights stay locked in pages. Every export is manual, every chart is out of date the moment you make it.</p>
+      </div>
+
+      <div class="pain-card">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <path d="M12 16V8M8 12l4-4 4 4"/>
+          </svg>
+        </div>
+        <h3>Your data lives in Airtable, Linear, Sheets.<br>None of it talks to the rest.</h3>
+        <p>Every tool grew independently. Nobody designed the connections. So your ops team became the connection — manually, repeatedly, forever.</p>
+      </div>
+
+    </div>
+    <p class="pain-footer">This isn't a technical problem. It's a coherence problem — and it compounds every week you don't solve it.</p>
+  </div>
+</section>
+
+<!-- How It Works -->
+<section class="how-section">
+  <div class="container">
+    <p class="section-label">How it works</p>
+    <h2 class="section-headline">Three steps to keep everything in sync.</h2>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Connect</h3>
+        <p>Link the tools your team already uses. Each one becomes a node in your data graph.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Map</h3>
+        <p>Define which data flows where — and in which direction. Notion to Sheets, Linear to Notion, Airtable to both.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Sync</h3>
+        <p>Data moves across your entire tool graph — in any direction, on a schedule or on demand. You define the rules once.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Graph / Integrations -->
+<section class="integrations-section">
+  <div class="container section-center">
+    <p class="section-label">The data graph</p>
+    <h2 class="section-headline no-margin">Not hub-and-spoke. A graph.</h2>
+    <p class="graph-description">
+      Most sync tools treat one platform as the center of the universe. We don't.
+      Any tool can be a source. Any tool can be a destination. You define the edges.
+    </p>
+
+    <div class="graph-diagram">
+      <svg viewBox="0 0 440 310" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+        <!-- Edges -->
+        <g class="graph-edges">
+          <line x1="220" y1="55"  x2="368" y2="145" stroke="#e8e5e0" stroke-width="1.5" stroke-dasharray="5,4"/>
+          <line x1="220" y1="55"  x2="318" y2="265" stroke="#e8e5e0" stroke-width="1.5" stroke-dasharray="5,4"/>
+          <line x1="220" y1="55"  x2="122" y2="265" stroke="#e8e5e0" stroke-width="1.5" stroke-dasharray="5,4"/>
+          <line x1="220" y1="55"  x2="72"  y2="145" stroke="#e8e5e0" stroke-width="1.5" stroke-dasharray="5,4"/>
+          <line x1="368" y1="145" x2="318" y2="265" stroke="#e8e5e0" stroke-width="1.5" stroke-dasharray="5,4"/>
+          <line x1="318" y1="265" x2="122" y2="265" stroke="#e8e5e0" stroke-width="1.5" stroke-dasharray="5,4"/>
+          <line x1="122" y1="265" x2="72"  y2="145" stroke="#e8e5e0" stroke-width="1.5" stroke-dasharray="5,4"/>
+          <line x1="72"  y1="145" x2="318" y2="265" stroke="#e8e5e0" stroke-width="1.5" stroke-dasharray="5,4"/>
+          <line x1="368" y1="145" x2="122" y2="265" stroke="#e8e5e0" stroke-width="1.5" stroke-dasharray="5,4"/>
+        </g>
+
+        <!-- Notion (top) — document icon -->
+        <g class="node node-notion">
+          <circle cx="220" cy="55" r="36" class="node-circle" fill="white" stroke="#1c1917" stroke-width="1.5"/>
+          <g class="node-icon" transform="translate(220,47)">
+            <path d="M-6,9 L-6,-9 L3,-9 L8,-4 L8,9 Z M3,-9 L3,-4 L8,-4 M-3,0 L5,0 M-3,4 L5,4"
+              stroke="#1c1917" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <text x="220" y="69" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" font-weight="600" class="node-label" fill="#1c1917">Notion</text>
+        </g>
+
+        <!-- Airtable (upper right) — 2×2 grid icon -->
+        <g class="node node-airtable">
+          <circle cx="368" cy="145" r="30" class="node-circle" fill="white" stroke="#2d7ff9" stroke-width="1.5"/>
+          <g class="node-icon" transform="translate(368,137)">
+            <path d="M-7,-7 L-1,-7 L-1,-1 L-7,-1 Z M1,-7 L7,-7 L7,-1 L1,-1 Z M-7,1 L-1,1 L-1,7 L-7,7 Z M1,1 L7,1 L7,7 L1,7 Z"
+              stroke="#2d7ff9" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <text x="368" y="159" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="10" font-weight="600" class="node-label" fill="#2d7ff9">Airtable</text>
+        </g>
+
+        <!-- Sheets (lower right) — spreadsheet rows icon -->
+        <g class="node node-sheets">
+          <circle cx="318" cy="265" r="30" class="node-circle" fill="white" stroke="#34a853" stroke-width="1.5"/>
+          <g class="node-icon" transform="translate(318,257)">
+            <path d="M-7,-8 L7,-8 L7,8 L-7,8 Z M-7,-3 L7,-3 M-7,2 L7,2 M-2,-8 L-2,8"
+              stroke="#34a853" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <text x="318" y="279" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="10" font-weight="600" class="node-label" fill="#34a853">Sheets</text>
+        </g>
+
+        <!-- Linear (lower left) — diamond icon -->
+        <g class="node node-linear">
+          <circle cx="122" cy="265" r="30" class="node-circle" fill="white" stroke="#5e6ad2" stroke-width="1.5"/>
+          <g class="node-icon" transform="translate(122,257)">
+            <path d="M0,-8 L8,0 L0,8 L-8,0 Z"
+              stroke="#5e6ad2" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <text x="122" y="279" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="10" font-weight="600" class="node-label" fill="#5e6ad2">Linear</text>
+        </g>
+
+        <!-- Asana (upper left) — three-dot logo -->
+        <g class="node node-asana">
+          <circle cx="72" cy="145" r="30" class="node-circle" fill="white" stroke="#f06a6a" stroke-width="1.5"/>
+          <g class="node-icon" transform="translate(72,137)">
+            <circle cx="0"  cy="-5" r="3.5" fill="none" stroke="#f06a6a" stroke-width="1.5"/>
+            <circle cx="-5" cy="4"  r="3.5" fill="none" stroke="#f06a6a" stroke-width="1.5"/>
+            <circle cx="5"  cy="4"  r="3.5" fill="none" stroke="#f06a6a" stroke-width="1.5"/>
+          </g>
+          <text x="72" y="159" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="10" font-weight="600" class="node-label" fill="#f06a6a">Asana</text>
+        </g>
+
+      </svg>
+    </div>
+
+    <p class="platforms-note">More platforms coming soon</p>
+  </div>
+</section>
+
+<!-- Second CTA -->
+<section class="cta-section">
+  <div class="container">
+    <h2 class="cta-headline">Get early access.</h2>
+    <p class="cta-description">
+      We're building the data graph layer for teams that don't have a data team. Sign up and we'll keep you in the loop — and ask for your input as we build.
+    </p>
+
+    <div class="form-wrap">
+      <div id="cta-form">
+        <div class="form-row">
+          <input type="email" id="cta-email" placeholder="you@company.com" autocomplete="email">
+          <button class="btn-primary" onclick="submitWaitlist('cta')">Notify me</button>
+        </div>
+        <p class="form-note">No spam. Just updates when we launch.</p>
+        <p class="form-error" id="cta-error" style="display:none"></p>
+      </div>
+      <div class="form-success" id="cta-success">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+        You're on the list. We'll be in touch.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-logo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M17 1l4 4-4 4"/>
+      <path d="M3 11V9a4 4 0 014-4h14"/>
+      <path d="M7 23l-4-4 4-4"/>
+      <path d="M21 13v2a4 4 0 01-4 4H3"/>
+    </svg>
+    Seam
+  </div>
+  <span class="footer-note">Built with care &nbsp;·&nbsp; 2025</span>
+</footer>
+
+<script>
+  async function submitWaitlist(prefix) {
+    const emailEl   = document.getElementById(prefix + '-email');
+    const errorEl   = document.getElementById(prefix + '-error');
+    const formEl    = document.getElementById(prefix + '-form');
+    const successEl = document.getElementById(prefix + '-success');
+    const btn       = formEl.querySelector('.btn-primary');
+
+    const email = emailEl.value.trim();
+    errorEl.style.display = 'none';
+
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      errorEl.textContent = 'Please enter a valid email address.';
+      errorEl.style.display = 'block';
+      emailEl.focus();
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = 'Signing up…';
+
+    try {
+      const res  = await fetch('/api/waitlist', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+      const data = await res.json();
+
+      if (res.ok && data.ok) {
+        formEl.style.display = 'none';
+        successEl.style.display = 'flex';
+      } else if (data.message) {
+        errorEl.textContent = data.message;
+        errorEl.style.display = 'block';
+        btn.disabled = false;
+        btn.textContent = 'Notify me';
+      } else {
+        throw new Error('Unexpected response');
+      }
+    } catch {
+      errorEl.textContent = 'Something went wrong. Please try again.';
+      errorEl.style.display = 'block';
+      btn.disabled = false;
+      btn.textContent = 'Notify me';
+    }
+  }
+
+  document.querySelectorAll('input[type="email"]').forEach(input => {
+    input.addEventListener('keydown', e => {
+      if (e.key === 'Enter') submitWaitlist(input.id.replace('-email', ''));
+    });
+  });
+</script>
+
+</body>
+</html>
