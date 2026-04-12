@@ -1,0 +1,9 @@
+[project]
+name = "useseam-landing"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.100.0",
+    "httpx>=0.24.0",
+    "uvicorn>=0.20.0",
+]
