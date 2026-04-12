@@ -1,11 +1,3 @@
-# /// script
-# requires-python = ">=3.10"
-# dependencies = [
-#   "fastapi>=0.100.0",
-#   "uvicorn>=0.20.0",
-#   "httpx>=0.24.0",
-# ]
-# ///
 """Local dev server. Usage: uv run serve.py"""
 
 import uvicorn
