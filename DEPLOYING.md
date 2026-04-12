@@ -4,6 +4,20 @@ The app runs on [Fly.io](https://fly.io) as `useseam-landing`.
 
 ## Deploy
 
+### Via GitHub Actions (recommended)
+
+Trigger the workflow manually from the `main` branch:
+
+```bash
+gh workflow run deploy --ref main
+```
+
+Or via the GitHub UI: **Actions → Deploy → Run workflow**.
+
+Requires a `FLY_API_TOKEN` secret set in the repo (see Prerequisites below).
+
+### Locally
+
 ```bash
 fly deploy
 ```
@@ -34,5 +48,10 @@ fly secrets list
 
 ## Prerequisites
 
+**Local deploys:**
 - [flyctl](https://fly.io/docs/hands-on/install-flyctl/) installed
 - Authenticated: `fly auth login`
+
+**GitHub Actions:**
+- `FLY_API_TOKEN` secret added to the repo (Settings → Secrets and variables → Actions)
+- Generate the token with: `fly tokens create deploy -x 999999h`
