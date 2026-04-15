@@ -7,3 +7,9 @@ dependencies = [
     "httpx>=0.24.0",
     "uvicorn>=0.20.0",
 ]
+
+[project.scripts]
+dev = "web._dev:main"
+
+[tool.uv]
+package = true
